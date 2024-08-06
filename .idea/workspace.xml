@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f3afc4fc-0723-416d-a1f9-123223b48e6b" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/webjars/bootstrap/5.3.2/bootstrap-5.3.2.jar!/META-INF/resources/webjars/bootstrap/5.3.2/scss/_variables.scss" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2kAR7N8LJ2WstTtUxpgkHpzhYk5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Backend.executor": "Run",
+    "JUnit.RoleRepositoryTest.createRole.executor": "Run",
+    "JUnit.RoleRepositoryTest.createRoleTest.executor": "Run",
+    "JUnit.RoleRepositoryTest.createRoles.executor": "Run",
+    "JUnit.RoleRepositoryTest.createRolesTest.executor": "Run",
+    "JUnit.RoleRepositoryTest.executor": "Run",
+    "JUnit.RoleRepositoryTest.s.executor": "Run",
+    "JUnit.UserRepositoryTest.createUser.executor": "Run",
+    "JUnit.UserRepositoryTest.createUserWithOneRoleTest.executor": "Run",
+    "JUnit.UserRepositoryTest.createUserWithTwoRolesTest.executor": "Run",
+    "JUnit.UserRepositoryTest.deleteUserById.executor": "Run",
+    "JUnit.UserRepositoryTest.findUserById.executor": "Run",
+    "JUnit.UserRepositoryTest.listAllUsersTest.executor": "Run",
+    "JUnit.UserRepositoryTest.updateUserRole.executor": "Run",
+    "JUnit.UserRepositoryTest.updateUserTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.BeautyNoonBackEndApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/iqbal-kang/Documents/My Projects/java-spring/BeautyNoon/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.25632185",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/images" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.beautynoon.admin.user" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BeautyNoonBackEndApplication">
+    <configuration name="Backend" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.beautynoon.admin.BeautyNoonBackEndApplication" />
+      <module name="BeautyNoonBackEnd" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest.deleteUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BeautyNoonBackEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.beautynoon.admin.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.beautynoon.admin.user" />
+      <option name="MAIN_CLASS_NAME" value="com.beautynoon.admin.user.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="deleteUserById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest.findUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BeautyNoonBackEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.beautynoon.admin.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.beautynoon.admin.user" />
+      <option name="MAIN_CLASS_NAME" value="com.beautynoon.admin.user.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="findUserById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest.listAllUsersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BeautyNoonBackEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.beautynoon.admin.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.beautynoon.admin.user" />
+      <option name="MAIN_CLASS_NAME" value="com.beautynoon.admin.user.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="listAllUsersTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest.updateUserRole" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BeautyNoonBackEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.beautynoon.admin.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.beautynoon.admin.user" />
+      <option name="MAIN_CLASS_NAME" value="com.beautynoon.admin.user.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="updateUserRole" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest.updateUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BeautyNoonBackEnd" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.beautynoon.admin.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.beautynoon.admin.user" />
+      <option name="MAIN_CLASS_NAME" value="com.beautynoon.admin.user.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="updateUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeautyNoonBackEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="BeautyNoonBackEnd" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.beautynoon.admin.BeautyNoonBackEndApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeautyNoonFrontEndApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="BeautyNoonFrontEnd" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.beautynoon.common.entity.site.BeautyNoonFrontEndApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeautyNoonFrontEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="BeautyNoonFrontEnd" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.beautynoon.site.BeautyNoonFrontEndApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Backend" />
+      <item itemvalue="JUnit.UserRepositoryTest.deleteUserById" />
+      <item itemvalue="JUnit.UserRepositoryTest.findUserById" />
+      <item itemvalue="JUnit.UserRepositoryTest.listAllUsersTest" />
+      <item itemvalue="JUnit.UserRepositoryTest.updateUserRole" />
+      <item itemvalue="JUnit.UserRepositoryTest.updateUserTest" />
+      <item itemvalue="Spring Boot.BeautyNoonFrontEndApplication (1)" />
+      <item itemvalue="Spring Boot.BeautyNoonFrontEndApplication" />
+      <item itemvalue="Spring Boot.BeautyNoonBackEndApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserRepositoryTest.deleteUserById" />
+        <item itemvalue="JUnit.UserRepositoryTest.updateUserRole" />
+        <item itemvalue="JUnit.UserRepositoryTest.updateUserTest" />
+        <item itemvalue="JUnit.UserRepositoryTest.findUserById" />
+        <item itemvalue="JUnit.UserRepositoryTest.listAllUsersTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3afc4fc-0723-416d-a1f9-123223b48e6b" name="Changes" comment="" />
+      <created>1722724227019</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722724227019</updated>
+      <workItem from="1722724228269" duration="220000" />
+      <workItem from="1722724456665" duration="1926000" />
+      <workItem from="1722726396044" duration="1816000" />
+      <workItem from="1722728225422" duration="12176000" />
+      <workItem from="1722758432953" duration="94000" />
+      <workItem from="1722758531046" duration="34000" />
+      <workItem from="1722758573749" duration="19000" />
+      <workItem from="1722758734941" duration="203000" />
+      <workItem from="1722758948202" duration="400000" />
+      <workItem from="1722759354675" duration="2244000" />
+      <workItem from="1722761654465" duration="7000" />
+      <workItem from="1722761809151" duration="9465000" />
+      <workItem from="1722841221845" duration="2007000" />
+      <workItem from="1722843319377" duration="6847000" />
+      <workItem from="1722853645363" duration="17000" />
+      <workItem from="1722894956018" duration="15201000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

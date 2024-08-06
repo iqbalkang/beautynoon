@@ -1,0 +1,55 @@
+@mixin round($size, $radius: 50% ) {
+  height: $size;
+  width: $size;
+  border-radius: $radius;
+}
+
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  &-profile-icon {
+    @include  round(4rem);
+    @include center();
+    @extend .bg-light-subtle;
+    @extend .mb-2
+  }
+
+  &-icon {
+    @include  round(2rem, 25%);
+    @include center();
+    @extend .bg-light-subtle;
+  }
+
+  :hover {
+    .nav-item-icon {
+      @extend .bg-primary;
+      @extend .text-light;
+    }
+
+    span {
+      @extend .fw-bold;
+    }
+  }
+}
+
+.logo {
+  width: 10rem;
+  //@extend .my-2;
+}
+
+.icon-lg {
+  font-size: 1rem;
+}
+
+.fs-sm {
+  font-size: 0.75rem;
+}
+
+.fs-md {
+  font-size: 0.9rem;
+}
+
