@@ -5,21 +5,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/chk")
 public class UserRestController {
-    private UserRepository userRepository;
+    private UserService userService;
 
     @Autowired
-    public UserRestController(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserRestController(UserService userService) {
+        this.userService = userService;
     }
 
-    @PostMapping("/check")
-    public Boolean checkEmail(@RequestBody User user) {
-        System.out.println(user);
-        System.out.println("check");
-        User userDB = userRepository.findByEmail(user.getEmail());
-        System.out.println(userDB);
-        return userDB == null;
+    @PostMapping("/check-email")
+    public Boolean sd(@RequestBody User user, @RequestParam(value = "edit", required = false) Boolean edit,  @RequestParam(name = "id", required = false) Integer id) {
+        return userService.isEmailUnique(user.getEmail(), edit, id);
     }
 }

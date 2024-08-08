@@ -105,8 +105,12 @@ tr th {
   width: 250px;
 }
 
-.test{
-  height: 500px;
-  background-color: red !important;
-  color: red !important;
+//.test{
+//  height: 500px;
+//  background-color: red !important;
+//  color: red !important;
+//}
+.content {
+  height: calc(100vh - 55px);
 }
+

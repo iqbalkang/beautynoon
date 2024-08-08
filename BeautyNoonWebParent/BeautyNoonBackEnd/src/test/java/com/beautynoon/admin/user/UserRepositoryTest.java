@@ -95,9 +95,15 @@ class UserRepositoryTest {
     }
 
     @Test
-    public void findUserByEmail() {
+    public void findUserByEmailTest() {
         User user = userRepository.findByEmail("iqbal.kang@yahoo.com");
 
         Assertions.assertThat(user).isNull();
+    }
+
+    @Test
+    public void countByIdTest() {
+        Long count = userRepository.countById(40);
+        Assertions.assertThat(count).isNotNull().isGreaterThan(0);
     }
 }
