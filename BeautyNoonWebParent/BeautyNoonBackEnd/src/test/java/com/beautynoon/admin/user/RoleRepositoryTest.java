@@ -26,7 +26,7 @@ class RoleRepositoryTest {
 
     @Test
     public void createRoleTest() {
-        Role adminRole = new Role("ADMIN", "Manage everything");
+        Role adminRole = new Role("admin", "Manage everything");
         Role roleDB = roleRepository.save(adminRole);
 
         Assertions.assertThat(roleDB.getId()).isGreaterThan(0);
@@ -34,10 +34,10 @@ class RoleRepositoryTest {
 
     @Test
     public void createRolesTest() {
-        Role salesPersonRole = new Role("SALESPERSON", "Manage product price, customers, shipping, orders and sales report");
-        Role editorRole = new Role("EDITOR", "Manage categories, brands, products, articles and menus");
-        Role shaipperRole = new Role("SHIPPER", "View products, orders and update order status");
-        Role assistantRole = new Role("ASSISTANT", "Manage questions and reviews");
+        Role salesPersonRole = new Role("salesperson", "Manage product price, customers, shipping, orders and sales report");
+        Role editorRole = new Role("editor", "Manage categories, brands, products, articles and menus");
+        Role shaipperRole = new Role("shipper", "View products, orders and update order status");
+        Role assistantRole = new Role("assistant", "Manage questions and reviews");
 
         Iterable<Role> roles = roleRepository.saveAll(List.of(salesPersonRole, editorRole, shaipperRole, assistantRole));
 

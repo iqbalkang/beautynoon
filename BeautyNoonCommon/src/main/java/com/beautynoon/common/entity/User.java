@@ -1,9 +1,11 @@
 package com.beautynoon.common.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.ColumnDefault;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "users")
@@ -27,9 +29,9 @@ public class User {
     @Column(length = 64)
     private String photos;
 
-    private Boolean enabled;
+    private Boolean enabled = true;
 
-    @ManyToMany()
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
@@ -126,5 +128,9 @@ public class User {
                 ", enabled=" + enabled +
                 ", roles=" + roles +
                 '}';
+    }
+
+    public String getFormattedRoles() {
+        return roles.stream().map(Role::getName).collect(Collectors.joining(", "));
     }
 }

@@ -59,13 +59,13 @@ class UserRepositoryTest {
 
     @Test
     public void findUserByIdTest() {
-        User user = userRepository.findById(6).orElse(null);
+        User user = userRepository.findById(2).orElse(null);
         Assertions.assertThat(user).isNotNull();
     }
 
     @Test
     public void updateUserTest() {
-        Optional<User> user = userRepository.findById(6);
+        Optional<User> user = userRepository.findById(2);
 
         if(user.isPresent()) {
             user.get().setEnabled(true);
@@ -90,7 +90,14 @@ class UserRepositoryTest {
     }
 
     @Test
-    public void deleteUserById() {
-        userRepository.deleteById(2);
+    public void deleteUserByIdTest() {
+        userRepository.deleteById(15);
+    }
+
+    @Test
+    public void findUserByEmail() {
+        User user = userRepository.findByEmail("iqbal.kang@yahoo.com");
+
+        Assertions.assertThat(user).isNull();
     }
 }

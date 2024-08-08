@@ -10,6 +10,35 @@
   align-items: center;
 }
 
+
+@mixin custom-button($color, $outline) {
+  @extend .btn;
+  border: 1px solid $color;
+  @extend .text-light;
+  background-color: $color;
+
+  @if $outline == true {
+    @extend .text-body;
+    background-color: transparent;
+  }
+
+  &:hover {
+    @if $outline == true {
+      background-color: $color;
+      @extend .text-light;
+    }@else {
+      background-color: $color;
+      border: 1px solid $color;
+      opacity: 0.85;
+    }
+  }
+}
+
+
+body{
+  @extend .text-body-secondary;
+}
+
 .nav-item {
   &-profile-icon {
     @include  round(4rem);
@@ -53,3 +82,31 @@
   font-size: 0.9rem;
 }
 
+.circle {
+  @include  round(3rem);
+  @include center();
+  @extend .bg-light-subtle;
+}
+
+tr td,
+tr th {
+  color: inherit !important;
+}
+
+.custom-btn-primary {
+  @include custom-button($primary, false );
+}
+
+.custom-btn-primary-outline {
+  @include custom-button($primary, true );
+}
+
+.toast-message {
+  width: 250px;
+}
+
+.test{
+  height: 500px;
+  background-color: red !important;
+  color: red !important;
+}
