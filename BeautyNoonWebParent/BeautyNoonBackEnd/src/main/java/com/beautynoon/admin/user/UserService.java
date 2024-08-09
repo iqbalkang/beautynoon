@@ -28,7 +28,7 @@ public class UserService {
     public Iterable<User> getUsers() {
 //        return userRepository.findAll();
         Integer pageNumber = 1;
-        Integer pageSize = 3;
+        Integer pageSize = 2;
         Pageable pageable = PageRequest.of(pageNumber, pageSize);
         Page<User> page = userRepository.findAll(pageable);
         System.out.println(page.getContent());
