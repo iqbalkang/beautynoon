@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3afc4fc-0723-416d-a1f9-123223b48e6b" name="Changes" comment="add and edit user finished">
-      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/FileUploadUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/MvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/images/drop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonCommon/src/main/java/com/beautynoon/common/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonCommon/src/main/java/com/beautynoon/common/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/custom.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/show-user-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/show-user-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/users.html" afterDir="false" />
-    </list>
+    <list default="true" id="f3afc4fc-0723-416d-a1f9-123223b48e6b" name="Changes" comment="before implementing pagination" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,18 +32,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "iqbalkang"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;iqbalkang&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/iqbalkang/beautynoon.git",
-    "accountId": "8dd9c921-2ae6-4101-8f1f-9ec1323813c5"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/iqbalkang/beautynoon.git&quot;,
+    &quot;accountId&quot;: &quot;8dd9c921-2ae6-4101-8f1f-9ec1323813c5&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$MAVEN_REPOSITORY$/org/webjars/bootstrap/5.3.2/bootstrap-5.3.2.jar!/META-INF/resources/webjars/bootstrap/5.3.2/scss/_variables.scss" root0="SKIP_INSPECTION" />
   </component>
@@ -105,7 +93,7 @@
     "Spring Boot.BeautyNoonBackEndApplication.executor": "Run",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Rebasing main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/iqbal-kang/Documents/My Projects/java-spring/BeautyNoon/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/images",
     "node.js.detected.package.eslint": "true",
@@ -349,7 +337,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723161520972</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="before implementing pagination">
+      <option name="closed" value="true" />
+      <created>1723245878766</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723245878766</updated>
+    </task>
+    <task id="LOCAL-00006" summary="before implementing pagination">
+      <option name="closed" value="true" />
+      <created>1723245978688</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723245978688</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +362,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="add and edit user finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="add and edit user finished" />
+    <MESSAGE value="before implementing pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="before implementing pagination" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
