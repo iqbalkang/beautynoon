@@ -156,16 +156,40 @@
 
   </div>
 
+<!--  content-->
   <div class="col-md-9 col-lg-10 border p-4">
+
     <div class="row h-100">
-      <div class="col-6 d-flex flex-column">
+<!--      content left-->
+      <div class="col-12 col-lg-6 d-flex flex-column">
         <h1 class="fs-5 text-body">Create new user</h1>
-        <div class="flex-grow-1 align-items-center d-flex justify-content-center">
-          <img th:src="@{/images/add-user.svg}" class="w-75" />
+        <div class="flex-grow-1 d-flex justify-content-center mt-4">
+
+<!--          <div class="h-50 w-50 text-center  d-flex flex-column align-items-center justify-content-center" >-->
+<!--            <div id="poster-container" class="d-flex flex-column h-100 justify-content-center rounded border-dashed">-->
+<!--              <i class="bi bi-cloud-arrow-up image-icon"></i>-->
+<!--              <span class="fw-medium">Choose a file</span>-->
+<!--              <span>JPEG, PNG, and JPG formats, upto 1MB. </span>-->
+<!--              <label for='poster' class='cursor-pointer'>-->
+<!--                <input-->
+<!--                        type='file'-->
+<!--                        id='poster'-->
+<!--                        name='poster'-->
+<!--                        accept='image/jpg, image/jpeg, image/png, image/webp'-->
+<!--                        hidden-->
+<!--                />-->
+<!--                <span class="custom-btn-primary-outline rounded mt-4">Browse File</span>-->
+<!--              </label>-->
+<!--            </div>-->
+<!--            <img src="" id="poster-image" alt="poster-image" class="d-none w-100 object-fit-cover rounded" />-->
+<!--          </div>-->
+
+
         </div>
       </div>
-      <div class="col-6">
-        <form th:action="@{/users/save}" method="POST" th:object="${user}" id="form">
+<!--      content right-->
+      <div class="col-12 col-lg-6">
+        <form th:action="@{/users/save}" method="POST" th:object="${user}" id="form" enctype="multipart/form-data">
           <input type="hidden" th:field="*{id}">
 <!--          text inputs-->
           <div class="mb-3">
@@ -184,7 +208,7 @@
           <div class="mb-3">
             <label for="password" class="form-label fs-md fw-medium">Password</label>
             <input th:if="${edit != true}" type="password" class="form-control" id="password" th:field="*{password}">
-            <input th:if="${edit == true}" type="password" class="form-control" id="password" placeholder="Leave this empty if you want to keep the old password" th:field="*{password}">
+            <input th:if="${edit == true}" type="password" class="form-control input" id="password" placeholder="Leave this empty if you want to keep the old password" th:field="*{password}">
           </div>
 <!--          Checkbox inputs-->
           <div  class="mb-3">
@@ -197,7 +221,6 @@
 
 
 
-
             </div>
           </div>
 <!--          Radio input-->
@@ -207,8 +230,30 @@
               <input class="form-check-input" type="checkbox" role="switch" id="status" th:field="*{enabled}">
               <label class="form-check-label" for="status">Active</label>
             </div>
-
           </div>
+<!--          photo-->
+
+          <div class="h-50 w-50 text-center  d-flex flex-column align-items-center justify-content-center" >
+            <div id="poster-container" class="d-flex flex-column h-100 justify-content-center rounded border-dashed">
+              <i class="bi bi-cloud-arrow-up image-icon"></i>
+              <span class="fw-medium">Choose a file</span>
+              <span>JPEG, PNG, and JPG formats, upto 1MB. </span>
+              <label for='poster' class='cursor-pointer'>
+                <input type="hidden" th:field="*{photos}" />
+                <input
+                        type='file'
+                        id='poster'
+                        name='poster'
+                        accept='image/jpg, image/jpeg, image/png, image/webp'
+                        hidden
+                />
+                <span class="custom-btn-primary-outline rounded mt-4">Browse File</span>
+              </label>
+            </div>
+            <img th:src="@{${user.photosPath}}" id="poster-image" alt="poster-image" class="w-100 object-fit-cover rounded" />
+          </div>
+
+
 <!--          Submit buttons-->
           <button type="submit" class="custom-btn-primary">Submit</button>
           <a th:href="@{/users}" class="custom-btn-primary-outline ">Cancel</a>
@@ -224,6 +269,7 @@
         </div>
       </div>
     </div>
+
   </div>
 
 </main>
@@ -231,6 +277,27 @@
 <script type="text/javascript">
   const form = document.getElementById("form");
   const toastMessage = document.getElementById('toast-message');
+
+  const poster = document.querySelector("#poster-container");
+  const posterImage = document.querySelector("#poster-image");
+
+  const fileInput = document.querySelector("#poster");
+
+  fileInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = (e) => {
+      const fileContent = e.target.result;
+
+
+      posterImage.classList.remove("d-none")
+      poster.classList.add("d-none")
+      posterImage.src = fileContent;
+    };
+
+    reader.readAsDataURL(file);
+  });
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();

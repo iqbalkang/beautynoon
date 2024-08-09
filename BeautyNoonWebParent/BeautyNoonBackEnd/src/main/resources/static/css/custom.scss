@@ -86,6 +86,7 @@ body{
   @include  round(3rem);
   @include center();
   @extend .bg-light-subtle;
+  @extend .overflow-hidden;
 }
 
 tr td,
@@ -105,12 +106,19 @@ tr th {
   width: 250px;
 }
 
-//.test{
-//  height: 500px;
-//  background-color: red !important;
-//  color: red !important;
-//}
 .content {
   height: calc(100vh - 55px);
 }
 
+.border-dashed {
+  border: 1px dashed $gray-500;
+}
+
+.image-icon {
+  font-size: 2rem;
+  //color: $gray-500;
+}
+
+.input::placeholder {
+  color: $gray-500;
+}

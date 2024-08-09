@@ -7195,7 +7195,7 @@ textarea.form-control-lg {
   overflow: auto !important;
 }
 
-.overflow-hidden {
+.overflow-hidden, .circle {
   overflow: hidden !important;
 }
 
@@ -11957,6 +11957,18 @@ tr th {
 
 .content {
   height: calc(100vh - 55px);
+}
+
+.border-dashed {
+  border: 1px dashed #adb5bd;
+}
+
+.image-icon {
+  font-size: 2rem;
+}
+
+.input::placeholder {
+  color: #adb5bd;
 }
 
 /*# sourceMappingURL=main.css.map */

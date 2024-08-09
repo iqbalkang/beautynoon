@@ -133,4 +133,9 @@ public class User {
     public String getFormattedRoles() {
         return roles.stream().map(Role::getName).collect(Collectors.joining(", "));
     }
+
+    @Transient
+    public String getPhotosPath() {
+        return "/user-photos/" + id + "/" + getPhotos();
+    }
 }
