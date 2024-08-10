@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @Service
 public class UserService {
+    private final Integer PAGE_SIZE = 10;
 
     public UserRepository userRepository;
     public RoleRepository roleRepository;
@@ -26,13 +27,12 @@ public class UserService {
     }
 
     public Iterable<User> getUsers() {
-//        return userRepository.findAll();
-        Integer pageNumber = 1;
-        Integer pageSize = 1;
-        Pageable pageable = PageRequest.of(pageNumber, pageSize);
-        Page<User> page = userRepository.findAll(pageable);
-        System.out.println(page.getContent());
-        return page.getContent();
+        return userRepository.findAll();
+    }
+
+    public Page<User> getUsersListByPage(Integer pageNumber) {
+        Pageable pageable = PageRequest.of(pageNumber - 1, PAGE_SIZE);
+        return userRepository.findAll(pageable);
     }
 
     public User save(User user) throws UserNotFoundException {

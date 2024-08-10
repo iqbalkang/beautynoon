@@ -4,6 +4,7 @@ import com.beautynoon.admin.FileUploadUtil;
 import com.beautynoon.common.entity.Role;
 import com.beautynoon.common.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,11 +26,20 @@ public class UserController {
         this.userService = userService;
     }
 
+//    @GetMapping("/users")
+//    public String getUsers(Model model) {
+//        return getUsersListByPage(1, model);
+//    }
+
     @GetMapping("/users")
-    public String getUsers(Model model) {
-        Iterable<User> users = userService.getUsers();
-//        List<User> users = List.of(new User());
+    public String getUsers(@RequestParam(name = "page", required = false, defaultValue = "1") Integer pageNumber, Model model) {
+        Page<User> page = userService.getUsersListByPage(pageNumber);
+        List<User> users = page.getContent();
+        Integer lastPage = page.getTotalPages();
+
         model.addAttribute("users", users);
+        model.addAttribute("lastPage", lastPage);
+        model.addAttribute("currentPage", pageNumber);
         return "users";
     }
 
@@ -58,17 +68,6 @@ public class UserController {
         return "redirect:/users";
     }
 
-    public void handleFileUpload(User user, MultipartFile file) throws IOException, UserNotFoundException {
-        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-        user.setPhotos(fileName);
-
-        User userDB = userService.save(user);
-        String dirPath = "user-photos/" + userDB.getId();
-
-        FileUploadUtil.cleanDir(dirPath);
-        FileUploadUtil.saveFile(file, dirPath, fileName);
-    }
-
     @GetMapping("/users/edit/{id}")
     public String updateUserForm(@PathVariable("id") Integer id, Model model, RedirectAttributes redirectAttributes) throws UserNotFoundException {
             User userDB = userService.findUserById(id);
@@ -89,13 +88,25 @@ public class UserController {
             return "redirect:/users";
     }
 
+//    Helper methods
     public void setRedirectAttributes(RedirectAttributes redirectAttributes, String status, String message) {
         redirectAttributes.addFlashAttribute("status", status);
         redirectAttributes.addFlashAttribute("message", message);
     }
 
+    public void handleFileUpload(User user, MultipartFile file) throws IOException, UserNotFoundException {
+        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+        user.setPhotos(fileName);
+
+        User userDB = userService.save(user);
+        String dirPath = "user-photos/" + userDB.getId();
+
+        FileUploadUtil.cleanDir(dirPath);
+        FileUploadUtil.saveFile(file, dirPath, fileName);
+    }
+
     @ExceptionHandler
-    public String handle(UserNotFoundException exception, RedirectAttributes redirectAttributes) {
+    public String handleUserNotFoundException(UserNotFoundException exception, RedirectAttributes redirectAttributes) {
         setRedirectAttributes(redirectAttributes, "danger", exception.getMessage());
         return "redirect:/users";
     }

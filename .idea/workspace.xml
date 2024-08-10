@@ -4,18 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3afc4fc-0723-416d-a1f9-123223b48e6b" name="Changes" comment="add and edit user finished">
-      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/FileUploadUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/MvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/images/drop.png" afterDir="false" />
+    <list default="true" id="f3afc4fc-0723-416d-a1f9-123223b48e6b" name="Changes" comment="fixing">
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/10/Frederick Santos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/11/Anna Maria.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/12/Satya Narayana.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/13/Matthew.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/14/Dave Kumar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/15/Jack Bruce.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/16/Mohamed Zirri.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/17/Mithun Kumar Majumdar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/18/Ali Raza.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/19/Isaac Henry.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/2/Allada Pavan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/20/Svetlana Stasovska.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/21/Mike Gates.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/22/Pedro Quintero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/23/Amina Elshal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/3/Bruce Kitchell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/4/Muhammad Evran.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/5/KentHervey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/6/Alfred.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/7/Nathi_Sangweni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/8/Ammanolla.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/9/Bill Feeny.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeautyNoonCommon/src/main/java/com/beautynoon/common/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonCommon/src/main/java/com/beautynoon/common/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/custom.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/show-user-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/show-user-form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/25/4b3fefa5-1d2d-4da0-947b-f132418c5cd3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/26/4b3fefa5-1d2d-4da0-947b-f132418c5cd3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/27/drop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/28/CleanShot 2024-07-30 at 21.14.54@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/29/CleanShot 2024-07-30 at 18.25.52@2x.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,61 +96,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Backend.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JUnit.PasswordEncoderTest.encodePassword.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PasswordEncoderTest.encodePasswordTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RoleRepositoryTest.createRole.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RoleRepositoryTest.createRoleTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RoleRepositoryTest.createRoles.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RoleRepositoryTest.createRolesTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RoleRepositoryTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.RoleRepositoryTest.s.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.countByIdTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.createUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.createUserWithOneRoleTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.createUserWithTwoRolesTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.deleteUserById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.findUserByEmail.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.findUserById.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.listAllUsersTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.updateUserRole.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserRepositoryTest.updateUserTest.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BeautyNoonBackEndApplication.executor&quot;: &quot;Run&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/iqbal-kang/Documents/My Projects/java-spring/BeautyNoon/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/images&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.25632185&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Backend.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.PasswordEncoderTest.encodePassword.executor": "Run",
+    "JUnit.PasswordEncoderTest.encodePasswordTest.executor": "Run",
+    "JUnit.RoleRepositoryTest.createRole.executor": "Run",
+    "JUnit.RoleRepositoryTest.createRoleTest.executor": "Run",
+    "JUnit.RoleRepositoryTest.createRoles.executor": "Run",
+    "JUnit.RoleRepositoryTest.createRolesTest.executor": "Run",
+    "JUnit.RoleRepositoryTest.executor": "Run",
+    "JUnit.RoleRepositoryTest.s.executor": "Run",
+    "JUnit.UserRepositoryTest.countByIdTest.executor": "Run",
+    "JUnit.UserRepositoryTest.createUser.executor": "Run",
+    "JUnit.UserRepositoryTest.createUserWithOneRoleTest.executor": "Run",
+    "JUnit.UserRepositoryTest.createUserWithTwoRolesTest.executor": "Run",
+    "JUnit.UserRepositoryTest.deleteUserById.executor": "Run",
+    "JUnit.UserRepositoryTest.findUserByEmail.executor": "Run",
+    "JUnit.UserRepositoryTest.findUserById.executor": "Run",
+    "JUnit.UserRepositoryTest.listAllUsersTest.executor": "Run",
+    "JUnit.UserRepositoryTest.updateUserRole.executor": "Run",
+    "JUnit.UserRepositoryTest.updateUserTest.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.BeautyNoonBackEndApplication.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/iqbal-kang/Documents/My Projects/BeautyNoon/BeautyNoonWebParent/BeautyNoonBackEnd",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.25632185",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "watcher.settings",
+    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.beautynoon.admin.user" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd" />
       <recent name="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/images" />
       <recent name="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static" />
       <recent name="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css" />
@@ -349,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723161520972</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixing">
+      <option name="closed" value="true" />
+      <created>1723247516434</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723247516434</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +389,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="add and edit user finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="add and edit user finished" />
+    <MESSAGE value="fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -158,19 +158,40 @@
 
 <!--    content-->
     <div class="col-md-9 col-lg-10 border-start content d-flex flex-column p-4">
+<!--        heading and top buttons-->
         <div>
             <h1 class="fs-5 text-body" id="mm">Manage Users</h1>
-            <div class="d-flex gap-1 align-items-center">
-                <a th:href="@{/users/new}" class="custom-btn-primary d-flex align-items-center gap-2">
-                    <i class="bi bi-person-fill-add"></i>
-                    <span class="border-start border-1 ps-2 fs-sm">Add User</span>
-                </a>
-                <button class="btn border"><i class="bi bi-filetype-pdf"></i></button>
-                <button class="btn border"><i class="bi bi-file-earmark-spreadsheet"></i></button>
-                <button class="btn border"><i class="bi bi-filetype-csv"></i></button>
+            <div class="d-flex align-items-center justify-content-between position-relative">
+<!--            left side buttons-->
+                <div class="d-flex gap-1 align-items-center">
+                    <a th:href="@{/users/new}" class="custom-btn-primary d-flex align-items-center gap-2">
+                        <i class="bi bi-person-fill-add"></i>
+                        <span class="border-start border-1 ps-2 fs-sm">Add User</span>
+                    </a>
+                    <button class="btn border"><i class="bi bi-filetype-pdf"></i></button>
+                    <button class="btn border"><i class="bi bi-file-earmark-spreadsheet"></i></button>
+                    <button class="btn border"><i class="bi bi-filetype-csv"></i></button>
+                </div>
 
-    <!--            toast message-->
-                <div th:if="${message != null}" class="text-light p-1 px-3 d-flex flex-column rounded fs-sm toast-message ms-auto shadow animate__animated animate__bounceIn" id="toast-container" th:classappend="${status == 'success' ? 'bg-success' : 'bg-danger'}">
+<!--            pagination-->
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination mb-0">
+                        <li th:class="${currentPage == 1 ? 'disabled page-item' : 'page-item'}">
+                            <a class="page-link" th:href="@{'/users?page=' + ${currentPage - 1}}">Previous</a>
+                        </li>
+
+                        <li th:each="i : ${#numbers.sequence(1, lastPage)}" th:class="${i == currentPage ? 'page-item active' : 'page-item'}">
+                            <a class="page-link" th:href="@{'/users?page=' + ${i}}">[[${i}]]</a>
+                        </li>
+
+                        <li th:class="${currentPage == lastPage ? 'disabled page-item' : 'page-item'}">
+                            <a class="page-link" th:href="@{'/users?page=' + ${currentPage + 1}}">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+
+    <!--        toast message-->
+                <div th:if="${message != null}"  class="text-light z-3 position-absolute end-0 p-1 px-3 d-flex flex-column rounded fs-sm toast-message ms-auto shadow animate__animated animate__bounceIn" id="toast-container" th:classappend="${status == 'success' ? 'bg-success' : 'bg-danger'}">
                     <div class="d-flex justify-content-between">
                         <span class="fw-bold text-capitalize" th:text="${status == 'success' ? 'success' : 'uh oh!'}"></span>
                         <i class="bi bi-x-circle-fill"  role="button" id="toast-message"></i>
@@ -180,6 +201,7 @@
             </div>
         </div>
 
+<!--        users table-->
         <div class="mt-4 flex-grow-1 overflow-scroll" id="users">
             <table class="table table-hover user-table align-middle">
                 <thead>
@@ -260,27 +282,26 @@
     const modalButton = document.querySelector(("#modal-button"))
 
 
-
     deleteButton.addEventListener('click', async (e) => {
         window.location.href = modalButton.getAttribute('href');
     })
 
     const removeToast = (element) => {
-        if (!element) element = this;
+        console.log(element)
         element.closest("#toast-container").classList.add('animate__bounceOut');
-
         element.addEventListener('animationend', () => {
-            element.parentNode.parentNode.remove();
+            console.log('ss')
+            element.closest('#toast-container').remove();
         }, { once: true });
     };
 
 
     window.addEventListener("load", () => {
-        const toastMessage = document.getElementById('toast-message');
+        const toastMessage = document.getElementById('toast-container');
 
         if(!toastMessage) return;
 
-        toastMessage.addEventListener('click', (event) => removeToast(event.target));
+        toastMessage.addEventListener('click', (event) => removeToast(event.currentTarget));
 
         setTimeout(() => {
             removeToast(toastMessage);
