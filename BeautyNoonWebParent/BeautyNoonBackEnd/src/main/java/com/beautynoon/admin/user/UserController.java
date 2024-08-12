@@ -32,14 +32,26 @@ public class UserController {
 //    }
 
     @GetMapping("/users")
-    public String getUsers(@RequestParam(name = "page", required = false, defaultValue = "1") Integer pageNumber, Model model) {
-        Page<User> page = userService.getUsersListByPage(pageNumber);
+    public String getUsers(
+            @RequestParam(name = "page", required = false, defaultValue = "1") Integer pageNumber,
+            @RequestParam(name = "sortBy", required = false, defaultValue = "id") String sortBy,
+            @RequestParam(name = "order", required = false, defaultValue = "asc") String order,
+            @RequestParam(name = "keyword", required = false) String keyword,
+            Model model) {
+
+        Page<User> page = userService.getUsersListByPage(pageNumber, sortBy, order, keyword);
         List<User> users = page.getContent();
         Integer lastPage = page.getTotalPages();
+
+        String reverseOrder = order.equals("asc") ? "desc" : "asc";
 
         model.addAttribute("users", users);
         model.addAttribute("lastPage", lastPage);
         model.addAttribute("currentPage", pageNumber);
+        model.addAttribute("reverseOrder", reverseOrder);
+        model.addAttribute("order", order);
+        model.addAttribute("sortBy", sortBy);
+        model.addAttribute("keyword", keyword);
         return "users";
     }
 

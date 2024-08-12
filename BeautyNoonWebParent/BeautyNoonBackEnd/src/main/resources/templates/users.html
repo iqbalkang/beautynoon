@@ -181,7 +181,7 @@
                         </li>
 
                         <li th:each="i : ${#numbers.sequence(1, lastPage)}" th:class="${i == currentPage ? 'page-item active' : 'page-item'}">
-                            <a class="page-link" th:href="@{'/users?page=' + ${i}}">[[${i}]]</a>
+                            <a class="page-link" th:href="@{'/users?page=' + ${i} + '&sortBy=' + ${sortBy} + '&order=' + ${order} + '&keyword=' + ${keyword} }">[[${i}]]</a>
                         </li>
 
                         <li th:class="${currentPage == lastPage ? 'disabled page-item' : 'page-item'}">
@@ -206,10 +206,19 @@
             <table class="table table-hover user-table align-middle">
                 <thead>
                 <tr>
-                    <th scope="col">#</th>
+<!--                    <th scope="col">#</th>-->
+                    <th scope="col">
+                        <a class="text-body table-link" th:href="@{'/users?page=' + ${currentPage} + '&sortBy=id&order=' + ${reverseOrder} + '&keyword=' + ${keyword} }">#</a>
+                        <span th:if="${reverseOrder=='asc' && sortBy == 'id'}"><i class="bi bi-caret-down-fill"></i></span>
+                        <span th:if="${reverseOrder!='asc' && sortBy == 'id'}"><i class="bi bi-caret-up-fill"></i></span>
+                    </th>
                     <th scope="col">User details</th>
                     <th scope="col">Role</th>
-                    <th scope="col">Status</th>
+                    <th scope="col">
+                        <a class="text-body table-link" th:href="@{'/users?page=' + ${currentPage} + '&sortBy=enabled&order=' + ${reverseOrder} + '&keyword=' + ${keyword} }">Status</a>
+                        <span th:if="${reverseOrder=='asc' && sortBy == 'enabled'}"><i class="bi bi-caret-down-fill"></i></span>
+                        <span th:if="${reverseOrder!='asc' && sortBy == 'enabled'}"><i class="bi bi-caret-up-fill"></i></span>
+                    </th>
                     <th scope="col"></th>
                 </tr>
                 </thead>
@@ -267,11 +276,6 @@
 
 
     </div>
-
-
-
-
-
 
 
 

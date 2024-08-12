@@ -39,6 +39,7 @@ body{
   @extend .text-body-secondary;
 }
 
+
 .nav-item {
   &-profile-icon {
     @include  round(4rem);
@@ -122,7 +123,8 @@ tr th {
 .input::placeholder {
   color: $gray-500;
 }
-//
-//.animate__bounceOut {
-//  animation-duration: 3s !important;
-//}
+
+.table-link {
+  @extend .text-body-secondary;
+  text-decoration: none;
+}

@@ -8472,7 +8472,7 @@ textarea.form-control-lg {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.text-body-secondary, body {
+.text-body-secondary, .table-link, body {
   --bs-text-opacity: 1;
   color: var(--bs-secondary-color) !important;
 }
@@ -11969,6 +11969,10 @@ tr th {
 
 .input::placeholder {
   color: #adb5bd;
+}
+
+.table-link {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */
