@@ -52,6 +52,10 @@ public class UserController {
         model.addAttribute("order", order);
         model.addAttribute("sortBy", sortBy);
         model.addAttribute("keyword", keyword);
+//        System.out.println("user");
+//        model.addAttribute("user", new User("bala", "kang", "bala@gmail.com", "zzzzz"));
+//        Iterable<Role> roles = userService.getRoles();
+//        model.addAttribute("roles", roles);
         return "users";
     }
 
@@ -64,7 +68,9 @@ public class UserController {
     }
 
     @PostMapping("/users/save")
-    public String saveUser(@ModelAttribute User user, RedirectAttributes redirectAttributes, @RequestParam("poster") MultipartFile file) throws IOException, UserNotFoundException {
+    public String saveUser(@ModelAttribute User user,
+                           RedirectAttributes redirectAttributes,
+                           @RequestParam(name = "poster", required = false) MultipartFile file) throws IOException, UserNotFoundException {
         boolean isEditing = (user.getId() != null);
 
         if (!file.isEmpty()) {
@@ -80,12 +86,14 @@ public class UserController {
         return "redirect:/users";
     }
 
+
     @GetMapping("/users/edit/{id}")
     public String updateUserForm(@PathVariable("id") Integer id, Model model, RedirectAttributes redirectAttributes) throws UserNotFoundException {
             User userDB = userService.findUserById(id);
             Iterable<Role> roles = userService.getRoles();
             model.addAttribute("roles", roles);
             model.addAttribute("user", userDB);
+            model.addAttribute("userId", id);
             model.addAttribute("edit", true);
             return "show-user-form";
 

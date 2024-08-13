@@ -11975,4 +11975,19 @@ tr th {
   text-decoration: none;
 }
 
+#poster-container {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-dashed {
+  border: 1px dashed #adb5bd;
+}
+
 /*# sourceMappingURL=main.css.map */

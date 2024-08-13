@@ -81,7 +81,7 @@ public class UserService {
         user.setPassword(encodedPassword);
     }
 
-    public Boolean isEmailUnique(String email, Boolean edit, Integer id) {
+    public Boolean isEmailUnique(String email, Integer id) {
 
         User user = userRepository.findByEmail(email);
         if(user == null) return true;

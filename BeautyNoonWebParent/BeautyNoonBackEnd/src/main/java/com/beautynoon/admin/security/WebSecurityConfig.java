@@ -19,7 +19,7 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(customizer -> customizer.anyRequest().permitAll());
 
-//        http.csrf(csrf -> csrf.disable());
+        http.csrf(csrf -> csrf.disable());
         return http.build();
     }
 }

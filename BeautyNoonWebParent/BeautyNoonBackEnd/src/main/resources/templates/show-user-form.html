@@ -1,360 +1,66 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="">
-<head>
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-  <title>Home - Shopme Admin</title>
+<form th:action="@{/users/save}" method="POST" th:object="${user}" id="user-form" enctype="multipart/form-data">
+  <input type="hidden" th:field="*{id}" th:data-user-id="*{id}" id="userId">
+  <input type="hidden" th:value="${edit}" id="editMode">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <link rel="stylesheet" th:href="@{/css/main.css}" type="text/css"/>
-  <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-  <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
 
-</head>
-<body class="d-flex flex-column min-vh-100">
-<!--	navbar-->
-<nav class="navbar bg-black d-flex justify-content-between px-2 px-sm-4">
-
-  <a class="navbar-brand d-flex justify-content-center" href="#">
-    <img th:src="@{/images/logo-light.svg}" alt="beauty noon logo" class="logo">
-  </a>
-  <form class="w-25" role="search">
-    <input class="form-control rounded-pill" type="search" placeholder="Search" aria-label="Search">
-
-  </form>
-</nav>
-
-<!--	main-->
-<main class="row flex-grow-1 gx-0">
-
-  <div class="col-md-3 col-lg-2">
-
-    <button class="btn btn-primary d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Toggle offcanvas</button>
-
-    <div class="offcanvas-md offcanvas-start fs-sm" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
-      <div class="offcanvas-header">
-        <a class="navbar-brand d-flex justify-content-center" th:href="@{/}">
-          <img th:src="@{/images/logo.svg}" alt="beauty noon logo" class="logo">
-        </a>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
-      </div>
-      <div class="d-flex justify-content-center">
-        <ul class="navbar-nav">
-
-          <li class="d-flex justify-content-center my-3">
-            <div class="text-center">
-              <div class="nav-item-profile-icon"></div>
-              <div>
-                <span class="fw-bold fs-md">Iqbal Kang</span>
-              </div>
-              <span>Editor</span>
-            </div>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link d-flex gap-3 align-items-center" th:href="@{/users}">
-              <div class="nav-item-icon">
-                <i class="bi bi-people icon-lg"></i>
-              </div>
-              <span>Users</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link d-flex gap-3 align-items-center" href="#">
-              <div class="nav-item-icon">
-                <i class="bi bi-columns-gap icon-lg"></i>
-              </div>
-              <span>Categories</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link d-flex gap-3 align-items-center" href="#">
-              <div class="nav-item-icon">
-                <i class="bi bi-award icon-lg"></i>
-              </div>
-              <span>Brands</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link d-flex gap-3 align-items-center" href="#">
-              <div class="nav-item-icon">
-                <i class="bi bi-boxes icon-lg"></i>
-              </div>
-              <span>Products</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link d-flex gap-3 align-items-center" href="#">
-              <div class="nav-item-icon">
-                <i class="bi bi-emoji-smile icon-lg"></i>
-              </div>
-              <span>Customers</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link d-flex gap-3 align-items-center" href="#">
-              <div class="nav-item-icon">
-                <i class="bi bi-truck icon-lg"></i>
-              </div>
-              <span>Shipping</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link d-flex gap-3 align-items-center" href="#">
-              <div class="nav-item-icon">
-                <i class="bi bi-bag icon-lg"></i>
-              </div>
-              <span>Orders</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link d-flex gap-3 align-items-center" href="#">
-              <div class="nav-item-icon">
-                <i class="bi bi-activity icon-lg"></i>
-              </div>
-              <span>Reports</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link d-flex gap-3 align-items-center" href="#">
-              <div class="nav-item-icon">
-                <i class="bi bi-newspaper icon-lg"></i>
-              </div>
-              <span>Articles</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link d-flex gap-3 align-items-center" href="#">
-              <div class="nav-item-icon">
-                <i class="bi bi-list icon-lg"></i>
-              </div>
-              <span>Menus</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link d-flex gap-3 align-items-center" href="#">
-              <div class="nav-item-icon">
-                <i class="bi bi-sliders icon-lg"></i>
-              </div>
-              <span>Settings</span>
-            </a>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-
+  <!--          photo-->
+  <div>
+    <input type="hidden" th:field="*{photos}" />
+    <input
+            type='file'
+            id='poster'
+            name='poster'
+            accept='image/jpg, image/jpeg, image/png, image/webp'
+            hidden
+    />
+    <label for="poster" th:class="${user.photosPath == null ? 'border-dashed' : 'border-none'}" id="poster-container">
+      <span th:if="${user.photosPath == null}" id="poster-label">Select Image</span>
+      <img th:if="${user.photosPath != null}" th:src="@{${user.photosPath}}" alt="poster-image" id="poster-image" class="w-100 h-100"/>
+    </label>
   </div>
 
-<!--  content-->
-  <div class="col-md-9 col-lg-10 border p-4">
-
-    <div class="row h-100">
-<!--      content left-->
-      <div class="col-12 col-lg-6 d-flex flex-column">
-        <h1 class="fs-5 text-body">Create new user</h1>
-        <div class="flex-grow-1 d-flex justify-content-center mt-4">
-
-<!--          <div class="h-50 w-50 text-center  d-flex flex-column align-items-center justify-content-center" >-->
-<!--            <div id="poster-container" class="d-flex flex-column h-100 justify-content-center rounded border-dashed">-->
-<!--              <i class="bi bi-cloud-arrow-up image-icon"></i>-->
-<!--              <span class="fw-medium">Choose a file</span>-->
-<!--              <span>JPEG, PNG, and JPG formats, upto 1MB. </span>-->
-<!--              <label for='poster' class='cursor-pointer'>-->
-<!--                <input-->
-<!--                        type='file'-->
-<!--                        id='poster'-->
-<!--                        name='poster'-->
-<!--                        accept='image/jpg, image/jpeg, image/png, image/webp'-->
-<!--                        hidden-->
-<!--                />-->
-<!--                <span class="custom-btn-primary-outline rounded mt-4">Browse File</span>-->
-<!--              </label>-->
-<!--            </div>-->
-<!--            <img src="" id="poster-image" alt="poster-image" class="d-none w-100 object-fit-cover rounded" />-->
-<!--          </div>-->
-
-
-        </div>
+  <!--          text inputs-->
+  <div class="mb-3">
+    <label for="email" class="form-label fs-md fw-medium">Email address</label>
+    <input type="email" class="form-control" id="email" th:field="*{email}">
+    <span class="text-danger fs-sm d-none ps-3" id="email-error">Email is already taken!</span>
+  </div>
+  <div class="mb-3">
+    <label for="firstname" class="form-label fs-md fw-medium">Firstname</label>
+    <input type="text" class="form-control" id="firstname" placeholder="" th:field="*{firstName}">
+  </div>
+  <div class="mb-3">
+    <label for="lastname" class="form-label fs-md fw-medium">Lastname</label>
+    <input type="text" class="form-control" id="lastname"  th:field="*{lastName}">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label fs-md fw-medium">Password</label>
+    <input th:if="${edit != true}" type="password" class="form-control" id="password" th:field="*{password}">
+    <input th:if="${edit == true}" type="password" class="form-control input" id="password" placeholder="Leave this empty if you want to keep the old password" th:field="*{password}">
+  </div>
+  <!--          Checkbox inputs-->
+  <div  class="mb-3">
+    <label for="password" class="form-label fs-md fw-medium">Role</label>
+    <div>
+      <div class="form-check form-check-inline" th:each="role : ${roles}">
+        <input class="form-check-input" type="checkbox" id="role" th:id="'role' + ${role.id}" th:value="${role.id}" th:field="*{roles}" />
+        <label class="form-check-label text-capitalize" th:for="'role' + ${role.id}" th:text="${role.name}"></label>
       </div>
-<!--      content right-->
-      <div class="col-12 col-lg-6">
-        <form th:action="@{/users/save}" method="POST" th:object="${user}" id="form" enctype="multipart/form-data">
-          <input type="hidden" th:field="*{id}">
-<!--          text inputs-->
-          <div class="mb-3">
-            <label for="email" class="form-label fs-md fw-medium">Email address</label>
-            <input type="email" class="form-control" id="email" th:field="*{email}">
-            <span class="text-danger fs-sm d-none ps-3" id="email-error">Email is already taken!</span>
-          </div>
-          <div class="mb-3">
-            <label for="firstname" class="form-label fs-md fw-medium">Firstname</label>
-            <input type="text" class="form-control" id="firstname" placeholder="" th:field="*{firstName}">
-          </div>
-          <div class="mb-3">
-            <label for="lastname" class="form-label fs-md fw-medium">Lastname</label>
-            <input type="text" class="form-control" id="lastname"  th:field="*{lastName}">
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label fs-md fw-medium">Password</label>
-            <input th:if="${edit != true}" type="password" class="form-control" id="password" th:field="*{password}">
-            <input th:if="${edit == true}" type="password" class="form-control input" id="password" placeholder="Leave this empty if you want to keep the old password" th:field="*{password}">
-          </div>
-<!--          Checkbox inputs-->
-          <div  class="mb-3">
-            <label for="password" class="form-label fs-md fw-medium">Role</label>
-            <div>
-              <div class="form-check form-check-inline" th:each="role : ${roles}">
-                <input class="form-check-input" type="checkbox" id="role" th:id="'role' + ${role.id}" th:value="${role.id}" th:field="*{roles}" />
-                <label class="form-check-label text-capitalize" th:for="'role' + ${role.id}" th:text="${role.name}"></label>
-              </div>
 
 
 
-            </div>
-          </div>
-<!--          Radio input-->
-          <div  class="mb-3">
-            <label for="password" class="form-label fs-md fw-medium">Status</label>
-            <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="status" th:field="*{enabled}">
-              <label class="form-check-label" for="status">Active</label>
-            </div>
-          </div>
-<!--          photo-->
-
-          <div class="h-50 w-50 text-center  d-flex flex-column align-items-center justify-content-center" >
-            <div id="poster-container" class="d-flex flex-column h-100 justify-content-center rounded border-dashed">
-              <i class="bi bi-cloud-arrow-up image-icon"></i>
-              <span class="fw-medium">Choose a file</span>
-              <span>JPEG, PNG, and JPG formats, upto 1MB. </span>
-              <label for='poster' class='cursor-pointer'>
-                <input type="hidden" th:field="*{photos}" />
-                <input
-                        type='file'
-                        id='poster'
-                        name='poster'
-                        accept='image/jpg, image/jpeg, image/png, image/webp'
-                        hidden
-                />
-                <span class="custom-btn-primary-outline rounded mt-4">Browse File</span>
-              </label>
-            </div>
-            <img th:src="@{${user.photosPath}}" id="poster-image" alt="poster-image" class="w-100 object-fit-cover rounded" />
-          </div>
-
-
-<!--          Submit buttons-->
-          <button type="submit" class="custom-btn-primary">Submit</button>
-          <a th:href="@{/users}" class="custom-btn-primary-outline ">Cancel</a>
-        </form>
-
-<!--            toast message-->
-        <div class="bg-danger text-light p-1 px-3 d-flex flex-column rounded fs-sm toast-message ms-auto shadow animate__animated animate__bounceIn d-none" id="toast-container">
-          <div class="d-flex justify-content-between">
-            <span class="fw-bold">Error</span>
-            <i class="bi bi-x-circle-fill"  role="button" id="toast-message"></i>
-          </div>
-          <span>Uh Oh! Something went wrong.</span>
-        </div>
-      </div>
     </div>
-
+  </div>
+  <!--          Radio input-->
+  <div  class="mb-3">
+    <label for="password" class="form-label fs-md fw-medium">Status</label>
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="status" th:field="*{enabled}">
+      <label class="form-check-label" for="status">Active</label>
+    </div>
   </div>
 
-</main>
-
-<script type="text/javascript">
-  const form = document.getElementById("form");
-  const toastMessage = document.getElementById('toast-message');
-
-  const poster = document.querySelector("#poster-container");
-  const posterImage = document.querySelector("#poster-image");
-
-  const fileInput = document.querySelector("#poster");
-
-  fileInput.addEventListener('change', (event) => {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-
-    reader.onload = (e) => {
-      const fileContent = e.target.result;
-
-
-      posterImage.classList.remove("d-none")
-      poster.classList.add("d-none")
-      posterImage.src = fileContent;
-    };
-
-    reader.readAsDataURL(file);
-  });
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const email = document.querySelector("#email").value;
-    const csrfToken = document.querySelector('input[name="_csrf"]').value;
-    const emailError = document.querySelector("#email-error");
-    const toast = document.querySelector("#toast-container");
-
-
-    const formData = {email}
-
-    const editMode = "[[${edit}]]"
-    const id = "[[${user.id}]]"
-    let link;
-
-    if(editMode) link = `/beautynoon/check-email?edit=${editMode}&id=${id}`;
-    else link = '/beautynoon/check-email'
-
-    const response = await fetch(link, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRF-TOKEN': csrfToken
-      },
-      body: JSON.stringify(formData)
-    });
-
-    if(!response.ok) return toast.classList.remove("d-none");
-
-    const result = await response.json();
-    console.log(response)
-
-    if(result === true) return form.submit();
-    else emailError.classList.remove("d-none")
-  })
-
-  const removeToast = (element) => {
-    if (!element) element = this;
-    element.closest("#toast-container").classList.add('animate__bounceOut');
-
-    element.addEventListener('animationend', () => {
-      element.parentNode.parentNode.remove();
-    }, { once: true });
-  };
-
-  toastMessage.addEventListener('click', (event) => removeToast(event.target));
-
-  setTimeout(() => {
-    removeToast(toastMessage);
-  }, 4000);
-</script>
-
-
-
-
-
-
-</body>
-</html>
+  <!--          Submit buttons-->
+  <button type="submit" class="custom-btn-primary">Submit</button>
+  <a th:href="@{/users}" class="custom-btn-primary-outline ">Cancel</a>
+</form>

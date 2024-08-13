@@ -1,180 +1,32 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="">
-<head>
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-    <title>Home - Shopme Admin</title>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" th:include="base :: layout">
 
-    <link rel="stylesheet" th:href="@{/css/main.css}" type="text/css"/>
-    <link th:href="@{/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
-    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<body>
 
-</head>
-<body class="d-flex flex-column vh-100 overflow-hidden">
-<!--	navbar-->
-<nav class="navbar bg-black d-flex justify-content-between px-2 px-sm-4">
-
-    <a class="navbar-brand d-flex justify-content-center" th:href="@{/}">
-        <img th:src="@{/images/logo-light.svg}" alt="beauty noon logo" class="logo">
-    </a>
-    <form class="w-25" role="search">
-        <input class="form-control rounded-pill" type="search" placeholder="Search" aria-label="Search">
-    </form>
-</nav>
-
-<!--	main-->
-<main class="row flex-grow-1 gx-0">
-
-<!--    sidebar-->
-    <div class="col-md-3 col-lg-2">
-
-        <button class="btn btn-primary d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Toggle offcanvas</button>
-
-        <div class="offcanvas-md offcanvas-start fs-sm" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
-            <div class="offcanvas-header">
-                <a class="navbar-brand d-flex justify-content-center" href="#">
-                    <img th:src="@{/images/logo.svg}" alt="beauty noon logo" class="logo">
-                </a>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
-            </div>
-            <div class="d-flex justify-content-center">
-                <ul class="navbar-nav">
-
-                    <li class="d-flex justify-content-center my-3">
-                        <div class="text-center">
-                            <div class="nav-item-profile-icon"></div>
-                            <div>
-                                <span class="fw-bold fs-md">Iqbal Kang</span>
-                            </div>
-                            <span>Editor</span>
-                        </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link d-flex gap-3 align-items-center" th:href="@{/users}">
-                            <div class="nav-item-icon">
-                                <i class="bi bi-people icon-lg"></i>
-                            </div>
-                            <span>Users</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link d-flex gap-3 align-items-center" href="#">
-                            <div class="nav-item-icon">
-                                <i class="bi bi-columns-gap icon-lg"></i>
-                            </div>
-                            <span>Categories</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link d-flex gap-3 align-items-center" href="#">
-                            <div class="nav-item-icon">
-                                <i class="bi bi-award icon-lg"></i>
-                            </div>
-                            <span>Brands</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link d-flex gap-3 align-items-center" href="#">
-                            <div class="nav-item-icon">
-                                <i class="bi bi-boxes icon-lg"></i>
-                            </div>
-                            <span>Products</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link d-flex gap-3 align-items-center" href="#">
-                            <div class="nav-item-icon">
-                                <i class="bi bi-emoji-smile icon-lg"></i>
-                            </div>
-                            <span>Customers</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link d-flex gap-3 align-items-center" href="#">
-                            <div class="nav-item-icon">
-                                <i class="bi bi-truck icon-lg"></i>
-                            </div>
-                            <span>Shipping</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link d-flex gap-3 align-items-center" href="#">
-                            <div class="nav-item-icon">
-                                <i class="bi bi-bag icon-lg"></i>
-                            </div>
-                            <span>Orders</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link d-flex gap-3 align-items-center" href="#">
-                            <div class="nav-item-icon">
-                                <i class="bi bi-activity icon-lg"></i>
-                            </div>
-                            <span>Reports</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link d-flex gap-3 align-items-center" href="#">
-                            <div class="nav-item-icon">
-                                <i class="bi bi-newspaper icon-lg"></i>
-                            </div>
-                            <span>Articles</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link d-flex gap-3 align-items-center" href="#">
-                            <div class="nav-item-icon">
-                                <i class="bi bi-list icon-lg"></i>
-                            </div>
-                            <span>Menus</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link d-flex gap-3 align-items-center" href="#">
-                            <div class="nav-item-icon">
-                                <i class="bi bi-sliders icon-lg"></i>
-                            </div>
-                            <span>Settings</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-
-    </div>
-
-<!--    content-->
-    <div class="col-md-9 col-lg-10 border-start content d-flex flex-column p-4">
+    <th:block th:fragment="content">
 <!--        heading and top buttons-->
         <div>
             <h1 class="fs-5 text-body" id="mm">Manage Users</h1>
             <div class="d-flex align-items-center justify-content-between position-relative">
 <!--            left side buttons-->
                 <div class="d-flex gap-1 align-items-center">
-                    <a th:href="@{/users/new}" class="custom-btn-primary d-flex align-items-center gap-2">
+<!--                    <a th:href="@{/users/new}" class="custom-btn-primary d-flex align-items-center gap-2">-->
+<!--                        <i class="bi bi-person-fill-add"></i>-->
+<!--                        <span class="border-start border-1 ps-2 fs-sm">Add User</span>-->
+<!--                    </a>-->
+
+                    <button class="custom-btn-primary d-flex align-items-center gap-2" id="user-form-show-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <i class="bi bi-person-fill-add"></i>
                         <span class="border-start border-1 ps-2 fs-sm">Add User</span>
-                    </a>
+                    </button>
+
                     <button class="btn border"><i class="bi bi-filetype-pdf"></i></button>
                     <button class="btn border"><i class="bi bi-file-earmark-spreadsheet"></i></button>
                     <button class="btn border"><i class="bi bi-filetype-csv"></i></button>
                 </div>
 
 <!--            pagination-->
-                <nav aria-label="Page navigation example">
+                <nav aria-label="Page navigation example" th:if="${lastPage > 1}">
                     <ul class="pagination mb-0">
                         <li th:class="${currentPage == 1 ? 'disabled page-item' : 'page-item'}">
                             <a class="page-link" th:href="@{'/users?page=' + ${currentPage - 1}}">Previous</a>
@@ -242,8 +94,10 @@
                         <span th:if="${user.enabled == false}" class="badge rounded-pill bg-danger-subtle text-danger"> <i class="bi bi-stop-fill pe-1"></i> Inactive</span>
                     </td>
                     <td class="">
-                        <a th:href="@{/users/edit/{id}(id=${user.id})}"><i class="bi bi-pen pe-2 text-body-secondary fs-md"></i></a>
-                        <a th:href="@{'/users/delete/' + ${user.id}}" id="modal-button" th:data-id="${user.id}"  data-bs-toggle="modal" data-bs-target="#modal">
+                        <a th:href="@{/users/edit/{id}(id=${user.id})}" data-bs-toggle="offcanvas" class="edit-user-button text-decoration-none" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <i class="bi bi-pen pe-2 text-body-secondary fs-md"></i>
+                        </a>
+                        <a th:href="@{'/users/delete/' + ${user.id}}" class="delete-user-button" th:data-id="${user.id}"  data-bs-toggle="modal" data-bs-target="#modal">
                            <i class="bi bi-trash text-body-secondary fs-md pe-none"></i>
                         </a>
                     </td>
@@ -252,6 +106,17 @@
                 </tbody>
             </table>
         </div>
+
+        <!--        Add User-->
+        <div class="offcanvas offcanvas-end rounded my-2" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasUserForm">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasLabel">Create new user</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="user-form-close-button"></button>
+            </div>
+            <div class="offcanvas-body" id="user-form-body">
+            </div>
+        </div>
+
 
 
         <!-- Modal -->
@@ -267,54 +132,17 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" id="delete-button" class="btn btn-primary">Save changes</button>
+                        <button type="button" id="confirm--user-add-button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
         </div>
 
+    </th:block>
 
 
-    </div>
-
-
-
-</main>
-
-<script type="text/javascript">
-    const deleteButton = document.querySelector(("#delete-button"))
-    const modalButton = document.querySelector(("#modal-button"))
-
-
-    deleteButton.addEventListener('click', async (e) => {
-        window.location.href = modalButton.getAttribute('href');
-    })
-
-    const removeToast = (element) => {
-        console.log(element)
-        element.closest("#toast-container").classList.add('animate__bounceOut');
-        element.addEventListener('animationend', () => {
-            console.log('ss')
-            element.closest('#toast-container').remove();
-        }, { once: true });
-    };
-
-
-    window.addEventListener("load", () => {
-        const toastMessage = document.getElementById('toast-container');
-
-        if(!toastMessage) return;
-
-        toastMessage.addEventListener('click', (event) => removeToast(event.currentTarget));
-
-        setTimeout(() => {
-            removeToast(toastMessage);
-        }, 4000);
-
-    })
-
+<script type="text/javascript" th:fragment="javascript" th:src="@{/js/users.js}">
 </script>
-
 
 
 </body>
