@@ -1,4 +1,4 @@
-import Users from "./users.js";
+import UserForm from "./UserForm.js";
 
 class App {
     constructor() {
@@ -7,7 +7,7 @@ class App {
 
 
     loadScripts() {
-        const users = new Users();
+        const users = new UserForm();
     }
 }
 

@@ -6,7 +6,7 @@
     <th:block th:fragment="content">
 <!--        heading and top buttons-->
         <div>
-            <h1 class="fs-5 text-body" id="mm">Manage Users</h1>
+            <h1 class="fs-5 text-body" id="mm">Manage UserForm</h1>
             <div class="d-flex align-items-center justify-content-between position-relative">
 <!--            left side buttons-->
                 <div class="d-flex gap-1 align-items-center">
@@ -108,7 +108,7 @@
         </div>
 
         <!--        Add User-->
-        <div class="offcanvas offcanvas-end rounded my-2" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasUserForm">
+        <div class="offcanvas offcanvas-end rounded my-2" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasUserForm" data-bs-backdrop='static'>
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasLabel">Create new user</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="user-form-close-button"></button>
@@ -141,7 +141,7 @@
     </th:block>
 
 
-<script type="text/javascript" th:fragment="javascript" th:src="@{/js/users.js}">
+<script type="text/javascript" th:fragment="javascript" th:src="@{/js/UserForm.js}">
 </script>
 
 
