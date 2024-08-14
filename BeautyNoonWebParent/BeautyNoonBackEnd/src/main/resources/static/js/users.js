@@ -66,7 +66,7 @@ class Users extends DOMElements {
     }
 
     removeScriptFromPage() {
-        console.log('ss')
+        // console.log('ss')
         const script = document.querySelector(".script")
         document.body.removeChild(script);
     }
