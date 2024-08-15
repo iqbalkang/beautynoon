@@ -1,55 +1,83 @@
-(function() {
+import DOMElements from "./DOMElements.js";
 
-    const form = document.getElementById("user-form");
+class SubmitUserForm extends DOMElements {
+    constructor() {
+        super({
+            selections: {
+                form: '#user-form',
+                posterContainer: "#poster-container",
+                posterLabel: "#poster-label",
+                posterImage: "#poster-image",
+                fileInput: "#poster",
+                email: "#email",
+                userId: "#userId",
+                editMode: "#editMode",
+                emailError: "#email-error",
+                toast: "#toast-container"
+            },
+        });
 
-    const posterContainer = document.querySelector("#poster-container");
-    const posterLabel = document.querySelector("#poster-label");
-    const posterImage = document.querySelector("#poster-image");
+        this.addEventListeners();
+    }
 
-    const fileInput = document.querySelector("#poster");
+    addEventListeners() {
+        const { fileInput, form } = this.elements;
 
-    fileInput.addEventListener('change', (event) => {
+        fileInput.addEventListener('change', this.loadImage.bind(this));
+        form.addEventListener("submit", this.submitForm.bind(this));
+    }
+
+    loadImage() {
+        const { posterImage, posterLabel, posterContainer } = this.elements;
+
         const file = event.target.files[0];
         const reader = new FileReader();
 
         reader.onload = (e) => {
             const fileContent = e.target.result;
 
-            if(!posterImage) {
-                const newPosterImage = document.createElement("img");
-                newPosterImage.classList.add("h-100", "w-100")
-                posterLabel.remove();
-                newPosterImage.src = fileContent;
-                posterContainer.append(newPosterImage)
-                posterContainer.classList.remove("border-dashed")
-            } else {
-                posterImage.src = fileContent;
-            }
+            if(!posterImage) this.createPosterImage(posterImage, posterLabel, posterContainer, fileContent);
+            else posterImage.src = fileContent;
         };
 
         reader.readAsDataURL(file);
-    });
 
-    form.addEventListener("submit", async (e) => {
+    }
+
+    createPosterImage(posterImage, posterLabel, posterContainer, fileContent) {
+        const newPosterImage = document.createElement("img");
+        newPosterImage.classList.add("h-100", "w-100")
+        posterLabel.remove();
+        newPosterImage.src = fileContent;
+        posterContainer.append(newPosterImage)
+        posterContainer.classList.remove("border-dashed")
+    }
+
+    async submitForm(e) {
+        const { form, email, emailError } = this.elements;
+
         e.preventDefault();
 
-        const email = document.querySelector("#email").value;
-        const userId = document.querySelector("#userId").value;
-        const editMode = document.querySelector("#editMode").value;
-        // const csrfToken = document.querySelector('input[name="_csrf"]').value;
-        const emailError = document.querySelector("#email-error");
-        const toast = document.querySelector("#toast-container");
+        const formData = {email: email.value}
 
-        console.log(editMode)
+        const result = await this.fetchEmailStatus(formData);
 
+        if(result === true) return form.submit();
+        else emailError.classList.remove("d-none")
 
-        const formData = {email}
-        let link;
+    }
 
-        if(editMode) link = `/beautynoon/check-email?id=${userId}`;
-        else link = '/beautynoon/check-email'
+    generateLink() {
+        const { userId, editMode } = this.elements;
 
-        console.log(link)
+        if(editMode.value) return `/beautynoon/check-email?id=${userId.value}`;
+        else return  '/beautynoon/check-email'
+    }
+
+    async fetchEmailStatus(formData) {
+        const { toast } = this.elements;
+
+        let link = this.generateLink();
 
         const response = await fetch(link, {
             method: 'POST',
@@ -62,10 +90,11 @@
 
         if(!response.ok) return toast.classList.remove("d-none");
 
-        const result = await response.json();
+        return response.json();
 
-        if(result === true) return form.submit();
-        else emailError.classList.remove("d-none")
-    })
+    }
 
-})();
+
+}
+
+export default SubmitUserForm;

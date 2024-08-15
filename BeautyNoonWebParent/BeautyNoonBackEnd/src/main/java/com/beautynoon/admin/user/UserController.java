@@ -26,11 +26,6 @@ public class UserController {
         this.userService = userService;
     }
 
-//    @GetMapping("/users")
-//    public String getUsers(Model model) {
-//        return getUsersListByPage(1, model);
-//    }
-
     @GetMapping("/users")
     public String getUsers(
             @RequestParam(name = "page", required = false, defaultValue = "1") Integer pageNumber,
@@ -52,10 +47,7 @@ public class UserController {
         model.addAttribute("order", order);
         model.addAttribute("sortBy", sortBy);
         model.addAttribute("keyword", keyword);
-//        System.out.println("user");
-//        model.addAttribute("user", new User("bala", "kang", "bala@gmail.com", "zzzzz"));
-//        Iterable<Role> roles = userService.getRoles();
-//        model.addAttribute("roles", roles);
+
         return "users";
     }
 
@@ -83,7 +75,8 @@ public class UserController {
         if (isEditing) setRedirectAttributes(redirectAttributes, "success", "User has been updated successfully!");
         else setRedirectAttributes(redirectAttributes, "success", "New user added successfully!");
 
-        return "redirect:/users";
+        String userToBeReturned = user.getEmail().split("@")[0];
+        return "redirect:/users?keyword=" + userToBeReturned;
     }
 
 
@@ -100,12 +93,18 @@ public class UserController {
     }
 
     @GetMapping("/users/delete/{id}")
-    public String deleteUser(@PathVariable("id") Integer id, Model model, RedirectAttributes redirectAttributes) throws UserNotFoundException {
+    public String deleteUser(@PathVariable("id") Integer id,
+                             @RequestParam(name = "page", required = false, defaultValue = "1") Integer pageNumber,
+                             @RequestParam(name = "sortBy", required = false, defaultValue = "id") String sortBy,
+                             @RequestParam(name = "order", required = false, defaultValue = "asc") String order,
+                             @RequestParam(name = "keyword", required = false) String keyword,
+                             Model model,
+                             RedirectAttributes redirectAttributes) throws UserNotFoundException {
 
             userService.deleteUser(id);
             setRedirectAttributes(redirectAttributes, "success", "User has been deleted successfully!");
 
-            return "redirect:/users";
+            return "redirect:/users?page=" + pageNumber +"&sortBy=" + sortBy + "&order=" + order;
     }
 
 //    Helper methods

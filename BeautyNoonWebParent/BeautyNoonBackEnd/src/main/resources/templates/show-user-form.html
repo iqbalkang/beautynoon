@@ -4,7 +4,7 @@
 
 
   <!--          photo-->
-  <div>
+  <div class="d-flex justify-content-center mb-3">
     <input type="hidden" th:field="*{photos}" />
     <input
             type='file'
@@ -13,9 +13,9 @@
             accept='image/jpg, image/jpeg, image/png, image/webp'
             hidden
     />
-    <label for="poster" th:class="${user.photosPath == null ? 'border-dashed' : 'border-none'}" id="poster-container">
+    <label for="poster" class="poster-container"  th:classAppend="${user.photosPath == null ? 'border-dashed' : 'border-none shadow-sm'}" id="poster-container">
       <span th:if="${user.photosPath == null}" id="poster-label">Select Image</span>
-      <img th:if="${user.photosPath != null}" th:src="@{${user.photosPath}}" alt="poster-image" id="poster-image" class="w-100 h-100"/>
+      <img th:if="${user.photosPath != null}" th:src="@{${user.photosPath}}" alt="poster-image" id="poster-image" class="w-100 h-100 object-fit-cover"/>
     </label>
   </div>
 

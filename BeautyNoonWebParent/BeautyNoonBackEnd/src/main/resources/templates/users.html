@@ -6,14 +6,10 @@
     <th:block th:fragment="content">
 <!--        heading and top buttons-->
         <div>
-            <h1 class="fs-5 text-body" id="mm">Manage UserForm</h1>
+            <h1 class="fs-5 text-body" id="mm">Manage User</h1>
             <div class="d-flex align-items-center justify-content-between position-relative">
 <!--            left side buttons-->
                 <div class="d-flex gap-1 align-items-center">
-<!--                    <a th:href="@{/users/new}" class="custom-btn-primary d-flex align-items-center gap-2">-->
-<!--                        <i class="bi bi-person-fill-add"></i>-->
-<!--                        <span class="border-start border-1 ps-2 fs-sm">Add User</span>-->
-<!--                    </a>-->
 
                     <button class="custom-btn-primary d-flex align-items-center gap-2" id="user-form-show-button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <i class="bi bi-person-fill-add"></i>
@@ -29,15 +25,15 @@
                 <nav aria-label="Page navigation example" th:if="${lastPage > 1}">
                     <ul class="pagination mb-0">
                         <li th:class="${currentPage == 1 ? 'disabled page-item' : 'page-item'}">
-                            <a class="page-link" th:href="@{'/users?page=' + ${currentPage - 1}}">Previous</a>
+                            <a th:replace="/fragments/table :: table-pagination-link(${currentPage - 1},'Previous')"></a>
                         </li>
 
                         <li th:each="i : ${#numbers.sequence(1, lastPage)}" th:class="${i == currentPage ? 'page-item active' : 'page-item'}">
-                            <a class="page-link" th:href="@{'/users?page=' + ${i} + '&sortBy=' + ${sortBy} + '&order=' + ${order} + '&keyword=' + ${keyword} }">[[${i}]]</a>
+                            <a th:replace="/fragments/table :: table-pagination-link(${i}, ${i})"></a>
                         </li>
 
                         <li th:class="${currentPage == lastPage ? 'disabled page-item' : 'page-item'}">
-                            <a class="page-link" th:href="@{'/users?page=' + ${currentPage + 1}}">Next</a>
+                            <a th:replace="/fragments/table :: table-pagination-link(${currentPage + 1},'Next')"></a>
                         </li>
                     </ul>
                 </nav>
@@ -55,22 +51,18 @@
 
 <!--        users table-->
         <div class="mt-4 flex-grow-1 overflow-scroll" id="users">
-            <table class="table table-hover user-table align-middle">
+            <div th:if="${users.size() == 0}" class="h-100 d-flex flex-column gap-3 justify-content-center align-items-center">
+                <img th:src="@{/images/no-data.svg}" alt="no data found" class="w-25 opacity-50" />
+                <p>No user was found!</p>
+
+            </div>
+            <table class="table table-hover user-table align-middle" th:if="${users.size()}">
                 <thead>
                 <tr>
-<!--                    <th scope="col">#</th>-->
-                    <th scope="col">
-                        <a class="text-body table-link" th:href="@{'/users?page=' + ${currentPage} + '&sortBy=id&order=' + ${reverseOrder} + '&keyword=' + ${keyword} }">#</a>
-                        <span th:if="${reverseOrder=='asc' && sortBy == 'id'}"><i class="bi bi-caret-down-fill"></i></span>
-                        <span th:if="${reverseOrder!='asc' && sortBy == 'id'}"><i class="bi bi-caret-up-fill"></i></span>
-                    </th>
-                    <th scope="col">User details</th>
+                    <th th:replace="/fragments/table :: table-sort('id', '#')"></th>
+                    <th th:replace="/fragments/table :: table-sort('firstName', 'User Details')"></th>
                     <th scope="col">Role</th>
-                    <th scope="col">
-                        <a class="text-body table-link" th:href="@{'/users?page=' + ${currentPage} + '&sortBy=enabled&order=' + ${reverseOrder} + '&keyword=' + ${keyword} }">Status</a>
-                        <span th:if="${reverseOrder=='asc' && sortBy == 'enabled'}"><i class="bi bi-caret-down-fill"></i></span>
-                        <span th:if="${reverseOrder!='asc' && sortBy == 'enabled'}"><i class="bi bi-caret-up-fill"></i></span>
-                    </th>
+                    <th th:replace="/fragments/table :: table-sort('enabled', 'Status')"></th>
                     <th scope="col"></th>
                 </tr>
                 </thead>
@@ -97,12 +89,11 @@
                         <a th:href="@{/users/edit/{id}(id=${user.id})}" data-bs-toggle="offcanvas" class="edit-user-button text-decoration-none" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <i class="bi bi-pen pe-2 text-body-secondary fs-md"></i>
                         </a>
-                        <a th:href="@{'/users/delete/' + ${user.id}}" class="delete-user-button" th:data-id="${user.id}"  data-bs-toggle="modal" data-bs-target="#modal">
+                        <a th:href="@{'/users/delete/' + ${user.id} +  '?page=' + ${currentPage} + '&sortBy=' + ${sortBy} + '&order=' + ${order} + ${keyword != null ? '&keyword=' + keyword : ''} }" class="delete-user-button" th:data-id="${user.id}"  data-bs-toggle="modal" data-bs-target="#modal">
                            <i class="bi bi-trash text-body-secondary fs-md pe-none"></i>
                         </a>
                     </td>
                 </tr>
-
                 </tbody>
             </table>
         </div>
@@ -132,17 +123,13 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" id="confirm--user-add-button" class="btn btn-primary">Save changes</button>
+                        <button type="button" id="confirm-user-add-button" class="btn btn-primary">Confirm</button>
                     </div>
                 </div>
             </div>
         </div>
 
     </th:block>
-
-
-<script type="text/javascript" th:fragment="javascript" th:src="@{/js/UserForm.js}">
-</script>
 
 
 </body>

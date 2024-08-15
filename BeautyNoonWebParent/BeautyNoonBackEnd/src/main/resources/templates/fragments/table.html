@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+</head>
+<body>
+
+<!--table sort -->
+    <th scope="col" th:fragment="table-sort(sortByField, label)">
+        <a class="text-body table-link" th:href="@{'/users?page=' + ${currentPage} + '&sortBy=' + ${sortByField} + '&order=' + ${reverseOrder} + ${keyword != null ? '&keyword=' + keyword : ''} }">[[${label}]]</a>
+        <span th:if="${reverseOrder!='asc' && sortBy == sortByField}"><i class="bi bi-caret-down-fill"></i></span>
+        <span th:if="${reverseOrder=='asc' && sortBy == sortByField}"><i class="bi bi-caret-up-fill"></i></span>
+    </th>
+
+<!--page link-->
+    <a th:fragment="table-pagination-link(currentPage, label)" class="page-link" th:href="@{'/users?page=' + ${currentPage} + '&sortBy=' + ${sortBy} + '&order=' + ${order} + ${keyword != null ? '&keyword=' + keyword : ''} }">[[${label}]]</a>
+</body>
+</html>
