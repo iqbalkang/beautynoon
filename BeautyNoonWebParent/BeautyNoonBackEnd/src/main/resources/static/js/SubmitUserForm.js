@@ -17,6 +17,7 @@ class SubmitUserForm extends DOMElements {
             },
         });
 
+        console.log('ran')
         this.addEventListeners();
     }
 
