@@ -14,6 +14,9 @@ $success: #50aa3d;
   //fonts
 $font-family-base: "Roboto", sans-serif;
 
+//custom variables
+$font-family-serif: "Italiana", sans-serif;
+
 @import '../../../../../node_modules/bootstrap/scss/bootstrap';
 
 @import "animate.min.css";

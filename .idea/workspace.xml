@@ -4,17 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3afc4fc-0723-416d-a1f9-123223b48e6b" name="Changes" comment="added js classes">
-      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/images/no-data.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/fragments/table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/UserController.java" afterDir="false" />
+    <list default="true" id="f3afc4fc-0723-416d-a1f9-123223b48e6b" name="Changes" comment="fixed bugs and finished JS modules and classes">
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/images/auth-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/images/login-bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/custom.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/UserForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/UserForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/Utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/Utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/show-user-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/show-user-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +146,7 @@
       <recent name="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/fragments" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.beautynoon.admin.security" />
       <recent name="com.beautynoon.admin" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
@@ -324,7 +330,7 @@
       <workItem from="1723289797200" duration="3000" />
       <workItem from="1723335756420" duration="10613000" />
       <workItem from="1723510637300" duration="29148000" />
-      <workItem from="1723609658850" duration="13490000" />
+      <workItem from="1723609658850" duration="37144000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -430,7 +436,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723611834308</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fixed bugs and finished JS modules and classes">
+      <option name="closed" value="true" />
+      <created>1723684021649</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1723684021649</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fixed bugs and finished JS modules and classes">
+      <option name="closed" value="true" />
+      <created>1723940757088</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1723940757088</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +468,8 @@
     <MESSAGE value="refactored users page and fixed bug for deleting users." />
     <MESSAGE value="implemented JS module" />
     <MESSAGE value="added js classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added js classes" />
+    <MESSAGE value="fixed bugs and finished JS modules and classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bugs and finished JS modules and classes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" th:fragment="layout">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+        <title>Users - Shopme Admin</title>
+
+        <link rel="stylesheet" th:href="@{/css/main.css}" type="text/css"/>
+        <link th:href="@{/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+
+    </head>
+    <body class="d-flex flex-column vh-100 overflow-hidde auth-box">
+
+    <!--    navbar-->
+<!--    <nav th:replace="/fragments/navbar :: navbar(true, 'keyword', ${keyword})"></nav>-->
+    <a class="navbar-brand d-flex justify-content-center" th:href="@{/}">
+        <img th:src="@{/images/logo-light.svg}" alt="beauty noon logo" class="py-3 auth-logo">
+    </a>
+
+    <!--    main-->
+    <main class="row flex-grow-1 mx-4">
+        <div class="d-none col-lg-6 d-lg-flex flex-column justify-content-center ps-5">
+            <span class="auth-span">Login</span>
+            <h1 class="auth-heading">Welcome <br/> back</h1>
+            <p>Sign back in to your account to access your courses and <br/> embody the art of being human.</p>
+        </div>
+        <div class="col-lg-6 auth-form-box">
+            <form>
+                <h2 class="auth-form-heading auth-heading">Your Account</h2>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label auth-label">Email</label>
+                    <input type="email" class="form-control bg-transparent" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label auth-label">Password</label>
+                    <input type="password" class="form-control bg-transparent" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                </div>
+                <button type="submit" class="custom-btn-primary">Submit</button>
+
+                <hr class="mt-5">
+                <div class="d-flex justify-content-between">
+                    <p class="text-uppercase fw-medium">Don't have an account?</p>
+                    <a href="">Sign up</a>
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+    <script type="module" th:src="@{/js/app.js}"></script>
+
+    </body>
+</html>

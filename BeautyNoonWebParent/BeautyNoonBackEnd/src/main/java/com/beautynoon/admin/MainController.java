@@ -12,4 +12,9 @@ public class MainController {
 		return "index";
 	}
 
+	@GetMapping("/login")
+	public String showLoginForm() {
+		return "login";
+	}
+
 }

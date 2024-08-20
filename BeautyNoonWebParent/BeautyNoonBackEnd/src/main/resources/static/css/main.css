@@ -11990,4 +11990,48 @@ tr th {
   border: 1px dashed #adb5bd;
 }
 
+.auth-box {
+  background: url("../images/login-bg.png") center center/cover no-repeat fixed;
+  color: #4e250e !important;
+}
+.auth-logo {
+  width: 15rem;
+}
+.auth-span {
+  font-family: "Italiana", sans-serif;
+  font-size: 2rem;
+}
+.auth-heading {
+  font-size: 6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.8;
+  letter-spacing: -3px;
+}
+.auth-text-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth-form-box {
+  background: #f9ebdd;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth-form-box form {
+  width: 100%;
+}
+.auth-form-heading {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.auth-label {
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
 /*# sourceMappingURL=main.css.map */
