@@ -8811,7 +8811,7 @@ textarea.form-control-lg {
   background-color: var(--bs-danger-bg-subtle) !important;
 }
 
-.bg-light-subtle, .circle, .nav-item-icon, .nav-item-profile-icon {
+.bg-light-subtle, .circle, .nav-item-icon {
   background-color: var(--bs-light-bg-subtle) !important;
 }
 
@@ -11887,12 +11887,10 @@ textarea.form-control-lg {
   }
 }
 .nav-item-profile-icon {
+  overflow: hidden;
   height: 4rem;
   width: 4rem;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .nav-item-icon {
   height: 2rem;
@@ -12032,6 +12030,10 @@ tr th {
 .auth-label {
   font-weight: 900;
   font-size: 1.25rem;
+}
+
+.toast {
+  top: 0.6rem;
 }
 
 /*# sourceMappingURL=main.css.map */

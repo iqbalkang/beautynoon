@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+    <head th:fragment="head(title)">
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+
+        <title>[[${title}]]</title>
+
+        <link rel="stylesheet" th:href="@{/css/main.css}" type="text/css"/>
+        <link th:href="@{/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+
+    </head>
+
+    <body> </body>
+</html>

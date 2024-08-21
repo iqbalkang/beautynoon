@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Toast</title>
+    </head>
+
+    <body>
+
+        <!--        toast message-->
+        <th:block th:fragment="toast(isShown, status, message)">
+            <div th:if="${message != null}"  class="toast text-light z-3 position-absolute end-0 p-1 px-3 d-flex flex-column rounded fs-sm toast-message ms-auto shadow animate__animated animate__bounceIn" id="toast-container" th:classappend="${status == 'success' ? 'bg-success' : 'bg-danger'}">
+                <div class="d-flex justify-content-between">
+                    <span class="fw-bold text-capitalize" th:text="${status == 'success' ? 'success' : 'uh oh!'}"></span>
+                    <i class="bi bi-x-circle-fill"  role="button" id="toast-message"></i>
+                </div>
+                <span>[[${message}]]</span>
+            </div>
+        </th:block>
+
+    </body>
+</html>

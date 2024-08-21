@@ -39,13 +39,15 @@
                 </nav>
 
     <!--        toast message-->
-                <div th:if="${message != null}"  class="text-light z-3 position-absolute end-0 p-1 px-3 d-flex flex-column rounded fs-sm toast-message ms-auto shadow animate__animated animate__bounceIn" id="toast-container" th:classappend="${status == 'success' ? 'bg-success' : 'bg-danger'}">
-                    <div class="d-flex justify-content-between">
-                        <span class="fw-bold text-capitalize" th:text="${status == 'success' ? 'success' : 'uh oh!'}"></span>
-                        <i class="bi bi-x-circle-fill"  role="button" id="toast-message"></i>
-                    </div>
-                    <span>[[${message}]]</span>
-                </div>
+                <div th:replace="/fragments/toast :: toast(${message != null}, ${status}, ${message})"></div>
+
+<!--                <div th:if="${message != null}"  class="text-light z-3 position-absolute end-0 p-1 px-3 d-flex flex-column rounded fs-sm toast-message ms-auto shadow animate__animated animate__bounceIn" id="toast-container" th:classappend="${status == 'success' ? 'bg-success' : 'bg-danger'}">-->
+<!--                    <div class="d-flex justify-content-between">-->
+<!--                        <span class="fw-bold text-capitalize" th:text="${status == 'success' ? 'success' : 'uh oh!'}"></span>-->
+<!--                        <i class="bi bi-x-circle-fill"  role="button" id="toast-message"></i>-->
+<!--                    </div>-->
+<!--                    <span>[[${message}]]</span>-->
+<!--                </div>-->
             </div>
         </div>
 

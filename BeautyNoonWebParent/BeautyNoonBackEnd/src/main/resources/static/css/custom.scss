@@ -42,9 +42,10 @@ body{
 
 .nav-item {
   &-profile-icon {
+    overflow: hidden;
     @include  round(4rem);
-    @include center();
-    @extend .bg-light-subtle;
+    //@include center();
+    //@extend .bg-light-subtle;
     @extend .mb-2
   }
 
@@ -192,5 +193,9 @@ tr th {
     font-weight: 900;
     font-size: 1.25rem;
   }
+}
+
+.toast {
+  top: 0.6rem;
 }
 

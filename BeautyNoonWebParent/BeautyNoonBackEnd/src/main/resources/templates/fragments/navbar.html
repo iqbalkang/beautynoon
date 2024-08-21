@@ -7,16 +7,16 @@
 
     <body>
 
-    <!--	navbar-->
-    <nav class="navbar bg-black d-flex justify-content-between px-2 px-sm-4" th:fragment="navbar(isShown, name, value)">
+        <!--	navbar-->
+        <nav class="navbar bg-black d-flex justify-content-between px-2 px-sm-4" th:fragment="navbar(isShown, name, value)">
 
-        <a class="navbar-brand d-flex justify-content-center" th:href="@{/}">
-            <img th:src="@{/images/logo-light.svg}" alt="beauty noon logo" class="logo">
-        </a>
-        <form th:if="${isShown}" class="w-25" role="search" th:action="@{/users}" method="GET">
-            <input class="form-control rounded-pill" type="search" placeholder="Search" aria-label="Search" th:name="${name}" th:value="${value}">
-        </form>
-    </nav>
+            <a class="navbar-brand d-flex justify-content-center" th:href="@{/}">
+                <img th:src="@{/images/logo-light.svg}" alt="beauty noon logo" class="logo">
+            </a>
+            <form th:if="${isShown}" class="w-25" role="search" th:action="@{/users}" method="GET">
+                <input class="form-control rounded-pill" type="search" placeholder="Search" aria-label="Search" th:name="${name}" th:value="${value}">
+            </form>
+        </nav>
 
     </body>
 </html>

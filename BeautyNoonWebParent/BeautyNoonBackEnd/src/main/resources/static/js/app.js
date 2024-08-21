@@ -8,7 +8,10 @@ class App {
 
 
     loadScripts() {
-        const users = new UserForm();
+        if (window.location.pathname === '/beautynoon/users') {
+            const users = new UserForm();
+        }
+
         const utils = new Utils();
     }
 }
