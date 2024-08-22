@@ -10,7 +10,8 @@ class UserForm extends DOMElements {
                 userFormBody: '#user-form-body',
                 deleteUserButtons: '.delete-user-button',
                 editUserButtons: ".edit-user-button",
-                userFormCloseButton: "#user-form-close-button"
+                userFormCloseButton: "#user-form-close-button",
+                editAccountButton: ".edit-account-button",
             },
         });
 
@@ -18,7 +19,7 @@ class UserForm extends DOMElements {
     }
 
     addEventListeners() {
-        const { deleteUserButtons, showUserFormButton, editUserButtons, userFormCloseButton } = this.elements;
+        const { deleteUserButtons, showUserFormButton, editUserButtons, editAccountButton } = this.elements;
 
         showUserFormButton.addEventListener('click', this.fetchUserForm.bind(this, "/beautynoon/users/new"));
 
@@ -35,6 +36,13 @@ class UserForm extends DOMElements {
             const href = deleteButton.getAttribute('href');
             deleteButton.addEventListener('click', this.openConfirmationModal.bind(this, href))
         })
+
+        editAccountButton.addEventListener('click', this.fetchUserForm.bind(this, editAccountButton.getAttribute('href')));
+
+        // editAccountButton.forEach(editButton => {
+        //     const href = editButton.getAttribute('href');
+        //     editAccountButton.addEventListener('click', this.fetchUserForm.bind(this, href))
+        // })
 
     }
 

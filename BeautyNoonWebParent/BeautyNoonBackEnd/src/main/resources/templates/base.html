@@ -37,7 +37,11 @@
                                             <span class="text-capitalize" sec:authentication="principal.fullName"></span>
                                         </button>
                                         <ul class="dropdown-menu border-0 shadow">
-                                            <li><a class="dropdown-item" th:href="@{/logout}">Update</a></li>
+                                            <li>
+                                                <a th:href="@{/account}" data-bs-toggle="offcanvas" class="dropdown-item" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                                    <span> Update </span>
+                                                </a>
+                                            </li>
                                             <li><a class="dropdown-item" th:href="@{/logout}">Logout</a></li>
                                         </ul>
                                     </div>
@@ -152,6 +156,15 @@
 
             <!--    content-->
             <div class="col-md-9 col-lg-10 border-start content d-flex flex-column p-4" th:include="this :: content">
+            </div>
+
+            <div class="offcanvas offcanvas-end rounded my-2" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasUserForm" data-bs-backdrop='static'>
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasLabel">Create new user</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" id="user-form-close-button"></button>
+                </div>
+                <div class="offcanvas-body" id="user-form-body">
+                </div>
             </div>
 
         </main>

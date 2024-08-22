@@ -12011,6 +12011,9 @@ tr th {
   justify-content: center;
   align-items: center;
 }
+.auth-input {
+  border: 1px solid #4e250e;
+}
 .auth-form-box {
   background: #f9ebdd;
   border-top-left-radius: 0.375rem;

@@ -4,35 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3afc4fc-0723-416d-a1f9-123223b48e6b" name="Changes" comment="starting to add security">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/security/BeautyNoonUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/security/BeautyNoonUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/fragments/head.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/fragments/toast.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonCommon/src/main/java/com/beautynoon/common/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonCommon/src/main/java/com/beautynoon/common/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/node_modules/.bin/color-support" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/node_modules/.bin/node-gyp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/node_modules/.bin/node-sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/node_modules/.bin/node-which" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/node_modules/.bin/nopt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/node_modules/.bin/resolve" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/node_modules/.bin/rimraf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/node_modules/.bin/sassgraph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/node_modules/.bin/semver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/security/WebSecurityConfig.java" afterDir="false" />
+    <list default="true" id="f3afc4fc-0723-416d-a1f9-123223b48e6b" name="Changes" comment="finished spring security">
+      <change afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/AccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/custom.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/UserForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/UserForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/1/CleanShot 2024-07-30 at 18.28.23@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +36,8 @@
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -343,7 +325,7 @@
       <workItem from="1723289797200" duration="3000" />
       <workItem from="1723335756420" duration="10613000" />
       <workItem from="1723510637300" duration="29148000" />
-      <workItem from="1723609658850" duration="60492000" />
+      <workItem from="1723609658850" duration="66688000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -473,7 +455,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724131930093</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="finished spring security">
+      <option name="closed" value="true" />
+      <created>1724209309069</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1724209309069</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +481,8 @@
     <MESSAGE value="added js classes" />
     <MESSAGE value="fixed bugs and finished JS modules and classes" />
     <MESSAGE value="starting to add security" />
-    <option name="LAST_COMMIT_MESSAGE" value="starting to add security" />
+    <MESSAGE value="finished spring security" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished spring security" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
