@@ -4,6 +4,7 @@ import Utils from "./Utils.js";
 class App {
     constructor() {
         this.loadScripts();
+        console.log('running js')
     }
 
 

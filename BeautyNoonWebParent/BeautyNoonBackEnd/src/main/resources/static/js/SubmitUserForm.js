@@ -17,7 +17,6 @@ class SubmitUserForm extends DOMElements {
             },
         });
 
-        console.log('ran')
         this.addEventListeners();
     }
 
@@ -68,7 +67,7 @@ class SubmitUserForm extends DOMElements {
 
     }
 
-    generateLink() {
+    generateEmailCheckLink() {
         const { userId, editMode } = this.elements;
 
         if(editMode.value) return `/beautynoon/check-email?id=${userId.value}`;
@@ -78,7 +77,7 @@ class SubmitUserForm extends DOMElements {
     async fetchEmailStatus(formData) {
         const { toast } = this.elements;
 
-        let link = this.generateLink();
+        let link = this.generateEmailCheckLink();
 
         const response = await fetch(link, {
             method: 'POST',

@@ -37,6 +37,7 @@ class UserForm extends DOMElements {
             deleteButton.addEventListener('click', this.openConfirmationModal.bind(this, href))
         })
 
+        console.log(editAccountButton)
         editAccountButton.addEventListener('click', this.fetchUserForm.bind(this, editAccountButton.getAttribute('href')));
 
         // editAccountButton.forEach(editButton => {

@@ -25,8 +25,12 @@ public class AccountController {
     public String updateAccount(@AuthenticationPrincipal BeautyNoonUserDetails loggedInUser, Model model) {
         String email = loggedInUser.getUsername();
         User user = userService.getUser(email);
+        Iterable<Role> roles = userService.getRoles();
 //        System.out.println(user);
         model.addAttribute("user", user);
+        model.addAttribute("roles", roles);
+        model.addAttribute("edit", true);
+        model.addAttribute("disableCheckbox", true);
         return "show-user-form";
     }
 

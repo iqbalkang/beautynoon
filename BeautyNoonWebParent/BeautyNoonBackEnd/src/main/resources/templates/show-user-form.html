@@ -43,7 +43,8 @@
     <label for="password" class="form-label fs-md fw-medium">Role</label>
     <div>
       <div class="form-check form-check-inline" th:each="role : ${roles}">
-        <input class="form-check-input" type="checkbox" id="role" th:id="'role' + ${role.id}" th:value="${role.id}" th:field="*{roles}" />
+        <input class="form-check-input" type="checkbox" id="role" th:id="'role' + ${role.id}" th:value="${role.id}" th:field="*{roles}" th:disabled="${disableCheckbox}"  />
+        <input th:if="${user.roles.contains(role)}" type="hidden" name="roles" th:value="${role.id}" th:disabled="${!disableCheckbox}" />
         <label class="form-check-label text-capitalize" th:for="'role' + ${role.id}" th:text="${role.name}"></label>
       </div>
 

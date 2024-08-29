@@ -56,6 +56,7 @@ public class UserController {
         Iterable<Role> roles = userService.getRoles();
         model.addAttribute("roles", roles);
         model.addAttribute("user", new User());
+        model.addAttribute("disableCheckbox", false);
         return "show-user-form";
     }
 
@@ -64,6 +65,9 @@ public class UserController {
                            RedirectAttributes redirectAttributes,
                            @RequestParam(name = "poster", required = false) MultipartFile file) throws IOException, UserNotFoundException {
         boolean isEditing = (user.getId() != null);
+
+        System.out.println(isEditing);
+        System.out.println(user);
 
         if (!file.isEmpty()) {
                 handleFileUpload(user, file);
@@ -88,6 +92,7 @@ public class UserController {
             model.addAttribute("user", userDB);
             model.addAttribute("userId", id);
             model.addAttribute("edit", true);
+            model.addAttribute("disableCheckbox", false);
             return "show-user-form";
 
     }
