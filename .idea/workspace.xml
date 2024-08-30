@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3afc4fc-0723-416d-a1f9-123223b48e6b" name="Changes" comment="finished spring security">
+    <list default="true" id="f3afc4fc-0723-416d-a1f9-123223b48e6b" name="Changes" comment="finished account update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/java/com/beautynoon/admin/user/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/SubmitUserForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/SubmitUserForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/UserForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/UserForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/static/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/show-user-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/src/main/resources/templates/show-user-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BeautyNoonWebParent/BeautyNoonBackEnd/user-photos/9/Bill Feeny.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +317,7 @@
       <workItem from="1723335756420" duration="10613000" />
       <workItem from="1723510637300" duration="29148000" />
       <workItem from="1723609658850" duration="68731000" />
-      <workItem from="1724802870544" duration="5883000" />
+      <workItem from="1724802870544" duration="6843000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -471,7 +463,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724295476391</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="finished account update">
+      <option name="closed" value="true" />
+      <created>1724903604972</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1724903604972</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +490,8 @@
     <MESSAGE value="fixed bugs and finished JS modules and classes" />
     <MESSAGE value="starting to add security" />
     <MESSAGE value="finished spring security" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished spring security" />
+    <MESSAGE value="finished account update" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished account update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
